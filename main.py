@@ -26,7 +26,7 @@ while True:
                 print(f"Capacity: {courses[course][2]}")
                 print(f"Enrolled: {len(courses[course][3])}\n")
         case 2: # register for a course
-            course_code = input("Enter course code: ")
+            course_code = input("Enter course code: ").strip()
             if course_code not in courses:
                 print(f"There is no courses with the code {course_code}.\n")
                 continue
@@ -40,7 +40,7 @@ while True:
             registered_courses.append(course_code)
             print(f"Successfully registered for {course_code}.\n")
         case 3: # drop a course
-            course_code = input("Enter course code: ")
+            course_code = input("Enter course code: ").strip()
             if course_code in registered_courses:
                 registered_courses.remove(course_code)
                 print(f"Successfully dropped {course_code}.\n")
